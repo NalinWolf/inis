@@ -38,7 +38,7 @@
             z-index: 1000;
         
         }
-        #quickViewModal::backdrop{
+        #modal::backdrop{
             background-color: rgba(0,0,0, 0.7);
         }
         #quickViewModal img {
@@ -59,12 +59,14 @@
     </div>
 
     <!-- Модальное окно Quick View -->
-    <div class="modal" id="quickViewModal">
+    <dialog class="modal">
+    <div id="quickViewModal">
         <img id="quickViewImage" src="" alt="Предпросмотр футболки">
         <h2 id="quickViewName"></h2>
         <p id="quickViewPrice"></p>
         <button id="closeQuickView">Закрыть</button>
     </div>
+    </dialog>
 
     <script src="shirts.js"></script>
     <script src="lab1.js"></script>
