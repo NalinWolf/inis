@@ -36,6 +36,10 @@
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
             z-index: 1000;
+        
+        }
+        .modal::backdrop{
+            background-color: rgba(0,0,0, 0.7);
         }
         #quickViewModal img {
             width: 150px;
@@ -55,7 +59,7 @@
     </div>
 
     <!-- Модальное окно Quick View -->
-    <div id="quickViewModal">
+    <div class="modal" id="quickViewModal">
         <img id="quickViewImage" src="" alt="Предпросмотр футболки">
         <h2 id="quickViewName"></h2>
         <p id="quickViewPrice"></p>
