@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const quickViewPrice = document.getElementById('quickViewPrice');
     const closeQuickView = document.getElementById('closeQuickView');
 
+
     // Функция для генерации карточек футболок
     function generateShirts() {
         shirts.forEach((shirt, index) => {
@@ -32,8 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
             quickViewBtn.classList.add('quick-view');
             quickViewBtn.addEventListener('click', () => openQuickView(index));
 
-            const seePageBtn = document.createElement('button');
-            seePageBtn.textContent = 'See Page';
+            // Кнопка See Page сохраняет данные в localStorage
+const seePageBtn = document.createElement('button');
+seePageBtn.textContent = 'See Page';
+seePageBtn.addEventListener('click', () => {
+    localStorage.setItem('selectedShirt', JSON.stringify(shirt)); // Сохраняем выбранную футболку
+    window.location.href = 'details.html'; // Переходим на страницу details.html
+});
 
             // Добавляем элементы в карточку
             card.appendChild(img);
